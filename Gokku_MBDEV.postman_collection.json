@@ -1,0 +1,3560 @@
+{
+	"info": {
+		"_postman_id": "6d8a62f9-a22c-43d3-8972-5897669f270a",
+		"name": "MBDEV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\":\"user\",\n\t\"password\":\"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service register search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NDA3NzExfQ.4aIKtSztS80acqUgUB894vZut851C2ulzlUl_1db3jid0YqFHazbNuMs5U1yK45GP3nYJBAq1_IKKnJySmUb3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/service-register/search?compCode=&idCard=&type=2&service=&status=&fromDate=2019/09/23&toDate=2019/09/28&page=1&size=10",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"service-register",
+						"search"
+					],
+					"query": [
+						{
+							"key": "compCode",
+							"value": ""
+						},
+						{
+							"key": "idCard",
+							"value": ""
+						},
+						{
+							"key": "type",
+							"value": "2"
+						},
+						{
+							"key": "service",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						},
+						{
+							"key": "fromDate",
+							"value": "2019/09/23"
+						},
+						{
+							"key": "toDate",
+							"value": "2019/09/28"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service register detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NDA3NzExfQ.4aIKtSztS80acqUgUB894vZut851C2ulzlUl_1db3jid0YqFHazbNuMs5U1yK45GP3nYJBAq1_IKKnJySmUb3A"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/service-register/250/detail",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"service-register",
+						"250",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service register get all service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NDA3NzExfQ.4aIKtSztS80acqUgUB894vZut851C2ulzlUl_1db3jid0YqFHazbNuMs5U1yK45GP3nYJBAq1_IKKnJySmUb3A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/service-register/get-all-service",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"service-register",
+						"get-all-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service register update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NDA3NzExfQ.4aIKtSztS80acqUgUB894vZut851C2ulzlUl_1db3jid0YqFHazbNuMs5U1yK45GP3nYJBAq1_IKKnJySmUb3A",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"compCode\": \"VN00100061\",\n    \"compName\": \"PGD HA NOI\",\n    \"status\": \"CLOSED\",\n\t\"comment\": \"ahihi2\",\n    \"userId\" : \"bestUSER\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/service-register/250/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"service-register",
+						"250",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/searchUser?fullName=&branchCode=&transactionCode=&page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"searchUser"
+					],
+					"query": [
+						{
+							"key": "fullName",
+							"value": ""
+						},
+						{
+							"key": "branchCode",
+							"value": ""
+						},
+						{
+							"key": "transactionCode",
+							"value": ""
+						},
+						{
+							"key": "userName",
+							"value": "khanhnt2",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": "2019/9/9",
+							"disabled": true
+						},
+						{
+							"key": "toDate",
+							"value": "2019/9/11",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZXgxIiwiZXhwIjoxNTY3NTg2NTc2fQ.L7Dn_XP-gslbKazAWueLA7AHixoG8E2Q3faSoF_t6JfiKAfV6DFK29GeDW0fwJENx7arZDDRgaRtd0Q7g0T2kw"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/get-listUser",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"get-listUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZXgxIiwiZXhwIjoxNTY3NTg2NTc2fQ.L7Dn_XP-gslbKazAWueLA7AHixoG8E2Q3faSoF_t6JfiKAfV6DFK29GeDW0fwJENx7arZDDRgaRtd0Q7g0T2kw"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/dex1/detail",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"dex1",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2NzEzMDkyOH0.BJ-ig39vNlfy0T8cPH550cpLnPLbRknEsf2MGfufuMhVp631IpS4zCWorZwVB524PFk8mAH1JQBygIaW9ZPtHg"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/dex3/delete",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"dex3",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user change password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MDMzNTc3fQ.mHAvKXfiJLeZzz_3JDNYgukemBV2T8zkXKns0Syw-nIIfd7kvdjt3lzJniA39KssicfvP23vBjCtdO9G-KIgKg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\":\"user\",\r\n\t\"oldPassword\":\"user1\",\r\n\t\"newPassword\":\"user\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/change-password",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MDI5MDUyfQ.IvoE1KiCvX-WxY-UxWTrs3AT5tgPpYSBHGUZu2hvSmfKKIfCCPKIw6uz9xScDtngvom0a0XZI4uXTko_3j7JVw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userName\": \"dex12\",\r\n\t\"fullName\": \"DDD1\",\r\n\t\"password\": \"dex1\",\r\n\t\"branchCode\": \"VN0010101\",\r\n\t\"transactionCode\": \"VN0010153\",\r\n\t\"roleId\": 70,\r\n\t\"email\": \"ddd@ddd.ddd\",\r\n\t\"phone\": \"1234567890\",\r\n\t\"userCode\": \"coder\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/createUser",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user updateUser",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2NzIxNzYwNH0.csze4sbaGAivqKCyEvZwjDPbL2lo6NtJ_Y3MWj7Q98o11Bbdeom1bA1-M0ZewRSHoZ3su-XwrueM81pjVwAVCA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"dex1\" ,\n\t\"branchCode\": \"hn\",\n\t\"posCode\": \"bt1\",\n\t\"fullName\": \"DDDDDDDDDDDDDDDDD\",\n\t\"email\": \"email@ex.a\",\n\t\"phone\": 12345678\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/update-user",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user updateUser status",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZXgyIiwiZXhwIjoxNTY3NTgyMjk2fQ.zmN8oIn3P9yLa9bhLu8e2Nx7A26_DVnptMvrgrRRTuI0SQhonwfMf0x3uplPfZmCr-HgifRN_t_FlMOCRSkgDA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"dex1\" ,\n\t\"status\": \"D\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user/update-user-status",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user",
+						"update-user-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTY4NDYyfQ.reAi2j0vA4V8iNzavDTdwIQh7o5-eHjScoWGK86PcYsM55Bu5lkyTmZ-O117YJQNYz5LP0d1T3MLYqUjWEfwkg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/search?branchName=Hà Nội&page=0&size=100",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"search"
+					],
+					"query": [
+						{
+							"key": "brnCode",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "branchName",
+							"value": "Hà Nội"
+						},
+						{
+							"key": "departCode",
+							"value": "VN0010001",
+							"disabled": true
+						},
+						{
+							"key": "departName",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch list activated branch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTY4NDYyfQ.reAi2j0vA4V8iNzavDTdwIQh7o5-eHjScoWGK86PcYsM55Bu5lkyTmZ-O117YJQNYz5LP0d1T3MLYqUjWEfwkg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/branch/activated-list",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"branch",
+						"activated-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch list activated depart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTY4NDYyfQ.reAi2j0vA4V8iNzavDTdwIQh7o5-eHjScoWGK86PcYsM55Bu5lkyTmZ-O117YJQNYz5LP0d1T3MLYqUjWEfwkg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/depart/activated-list",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"depart",
+						"activated-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4MjY3MTY4fQ.7AqEDL_-pffcPhk-aqgUBozBZx-WCdkUO2nedaIRf6qv7-mxNYRAEPOk1DBz2MyrW5RedbT489_l_dZwlGMNeA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/detail?departCode=VN0010112",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "departCode",
+							"value": "VN0010112"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODA5ODU2fQ.ZLMLVxI0fk2mas6JuaiqBOfubFfF4PZm8yyfdGr-XjLIe2dmgjyPz-ofEVLjt3W3dzBKY7z7lQxvg7pFCR2oOQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brnCode\": \"ZE0010112\",\n\t\"branchName\": \"Chi Nhanh Dex\",\n\t\"departCode\": \"ZE0010112\",\n\t\"departName\": \"Phong Giao Dich Dex\",\n\t\"address\": \"TVO\",\n\t\"phone\": \"0019001009\",\n\t\"fax\": \"0019001009\",\n\t\"latitude\": \"latitude D\",\n\t\"longitude\": \"longitude D\",\n\t\"urlImg\": \"xxx\",\n\t\"dao\": \"D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4MjY3MTY4fQ.7AqEDL_-pffcPhk-aqgUBozBZx-WCdkUO2nedaIRf6qv7-mxNYRAEPOk1DBz2MyrW5RedbT489_l_dZwlGMNeA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brnCode\": \"DE0010112\",\n\t\"branchName\": \"Chi Nhanh Dex\",\n\t\"departCode\": \"DE0010112\",\n\t\"departName\": \"Phong Giao Dich Dex\",\n\t\"address\": \"TVO\",\n\t\"phone\": \"0019001009\",\n\t\"fax\": \"0019001009\",\n\t\"latitude\": \"latitude D\",\n\t\"longitude\": \"longitude D\",\n\t\"urlImg\": \"xxx\",\n\t\"dao\": \"D\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-branch delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4MjY3MTY4fQ.7AqEDL_-pffcPhk-aqgUBozBZx-WCdkUO2nedaIRf6qv7-mxNYRAEPOk1DBz2MyrW5RedbT489_l_dZwlGMNeA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brnCode\": \"DE0010112\",\n\t\"branchName\": \"Chi Nhanh Dex\",\n\t\"departCode\": \"DE0010112\",\n\t\"departName\": \"Phong Giao Dich Dex\",\n\t\"address\": \"TVO\",\n\t\"phone\": \"0019001009\",\n\t\"fax\": \"0019001009\",\n\t\"latitude\": \"latitude D\",\n\t\"longitude\": \"longitude D\",\n\t\"urlImg\": \"xxx\",\n\t\"dao\": \"D\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-branch/delete?departCode=DE0010112",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-branch",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "departCode",
+							"value": "DE0010112"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/role/search?roleName=&status=&size=10&page=1&previous_page=0",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"role",
+						"search"
+					],
+					"query": [
+						{
+							"key": "roleName",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "previous_page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role get detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZXgxIiwiZXhwIjoxNTY3NjU5MDM5fQ.ix6mGDJOtozDlYV32nN9FUg_TtVf71xeU2wUAvwEeLjkW_JbecfxkViR41YQxIwZMNbZhVjmbUiql1-Fgss5Og"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/role/41/detail?",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"role",
+						"41",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "roleName",
+							"value": "ROLE_ADMIN",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2NzA2OTI4OX0.vrmB6lUUcJXwcbFenYtXZk4-Z3asJqVcFvJ_RFfXdPX9vPhA835HvEaw_7U8SueWdOGC6C7spKEzIb1K-uWWCA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roleName\": \"ROLE_USER\",\n\t\"description\": \"ROLE_USER json description 1\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/role/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"role",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2NzY3NDQxMX0.Mpw1MJm_3qyolJEZVY3tt8EogWoGYiy9DJdX9mG1iruisFH1X-hsg8YHU6XeDW7fBXF0OiFasrjiFaUI6qAIYw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roleName\": \"ROLE_MOD\",\n\t\"description\": \"test api\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/role/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTU4NDAwfQ.ehZZZm39Ju4EA9USfAealIo2DHhq4OjwFp6gyKKbjvuuRVM6IiL1whP7EBcQmcp2cdBuoFZrSaPcImc5eCIeuA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img",
+							"type": "file",
+							"src": "/C:/Users/ngocdc/Desktop/67935895_2102685443169138_1082933573704482816_o.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/uploadFile",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file get path",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODA5ODU2fQ.ZLMLVxI0fk2mas6JuaiqBOfubFfF4PZm8yyfdGr-XjLIe2dmgjyPz-ofEVLjt3W3dzBKY7z7lQxvg7pFCR2oOQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/user_20190918035908930_65035812_367459510572063_8312762983541374976_n.jpg",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"user_20190918035908930_65035812_367459510572063_8312762983541374976_n.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTU4NDAwfQ.ehZZZm39Ju4EA9USfAealIo2DHhq4OjwFp6gyKKbjvuuRVM6IiL1whP7EBcQmcp2cdBuoFZrSaPcImc5eCIeuA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/deleteFile?fileName=user_20190920091307857_65035812_367459510572063_8312762983541374976_n.jpg",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"deleteFile"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "user_20190920091307857_65035812_367459510572063_8312762983541374976_n.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file banner upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODgxMzU0fQ.zUIuX5jzUoeNbk-CHJUuys3RlG7a-5MX49Hndu6NiLe3BJyKP6Vi2JZl51A1AK32_v0DzhvOyDG38YOWRhMopA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img",
+							"type": "file",
+							"src": "/C:/Users/ngocdc/Desktop/65035812_367459510572063_8312762983541374976_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/banner/uploadFile",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"banner",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file banner get path",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODgyNjUwfQ.YH0zRK5U7gchMQoJf2w_nlM3ULJj87QZKIcv2PnqwqN0T2KnkWjIfhbg3D2yMxqWL8CR-UqQi89GRx2VZY69Cg"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/banner/user_20190918040305938_65035812_367459510572063_8312762983541374976_n.jpg",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"banner",
+						"user_20190918040305938_65035812_367459510572063_8312762983541374976_n.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file banner delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODA5ODU2fQ.ZLMLVxI0fk2mas6JuaiqBOfubFfF4PZm8yyfdGr-XjLIe2dmgjyPz-ofEVLjt3W3dzBKY7z7lQxvg7pFCR2oOQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/img/banner/deleteFile?fileName=user_20190918042418475_65035812_367459510572063_8312762983541374976_n.jpg",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"img",
+						"banner",
+						"deleteFile"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "user_20190918042418475_65035812_367459510572063_8312762983541374976_n.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par card create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTU4NDAwfQ.ehZZZm39Ju4EA9USfAealIo2DHhq4OjwFp6gyKKbjvuuRVM6IiL1whP7EBcQmcp2cdBuoFZrSaPcImc5eCIeuA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\": \"113\",\r\n    \"prdcode\": \"113\",\r\n    \"class_\": \"6\",\r\n    \"cardtype\": \"4\",\r\n    \"status\": \"A\",\r\n    \"issueFee\": \"13\",\r\n    \"reissueFee\": \"14\",\r\n    \"repinFee\": \"15\",\r\n    \"activeFee\": \"3\",\r\n    \"changesttFee\": \"5\",\r\n    \"directddFee\": \"7\",\r\n    \"f01\": \"8\",\r\n    \"f02\": \"9\",\r\n    \"f03\": \"10\",\r\n    \"f04\": \"11\",\r\n    \"f05\": \"12\",\r\n    \"linkUrl\": \"http://localhost:8081/NCB-smart/img/user_20190920091307857_65035812_367459510572063_8312762983541374976_n.jpg\",\r\n    \"fileName\": \"user_20190920091307857_65035812_367459510572063_8312762983541374976_n.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-card/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-card",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par card update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4MzYxOTE3fQ.PngKPmxjc3mh2svDFiTH8_N8sLwIynLEj-qWTYtpWMZ2KIEYVZ-zruvwe4YMBhWjVFZa1RZSi5BwoYGuJExBnw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"prdcode\": \"1\",\r\n  \"product\": \"2\",\r\n  \"status\": \"A\",\r\n  \"activeFee\": \"3\",\r\n  \"cardtype\": \"4\",\r\n  \"changesttFee\": \"5\",\r\n  \"class_\": \"6\",\r\n  \"directddFee\": \"7\",\r\n  \"f01\": \"8\",\r\n  \"f02\": \"9\",\r\n  \"f03\": \"10\",\r\n  \"f04\": \"11\",\r\n  \"f05\": \"12\",\r\n  \"issueFee\": \"13\",\r\n  \"reissueFee\": \"14\",\r\n  \"repinFee\": \"15\",\r\n  \"fileName\": \"admin_20190911094856907_65035812_367459510572063_8312762983541374976_n.jpg\",\r\n  \"linkUrl\": \"http://113.20.126.169:8081/NCB-smart/uploadFile/admin_20190911094856907_65035812_367459510572063_8312762983541374976_n.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-card/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-card",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par card detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTU4NDAwfQ.ehZZZm39Ju4EA9USfAealIo2DHhq4OjwFp6gyKKbjvuuRVM6IiL1whP7EBcQmcp2cdBuoFZrSaPcImc5eCIeuA"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-card/detail?prdcode=70000-WOMEN HOME DB",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-card",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "prdcode",
+							"value": "70000-WOMEN HOME DB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par card search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4OTU4NDAwfQ.ehZZZm39Ju4EA9USfAealIo2DHhq4OjwFp6gyKKbjvuuRVM6IiL1whP7EBcQmcp2cdBuoFZrSaPcImc5eCIeuA"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-card/search?prdcode=&product=&status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-card",
+						"search"
+					],
+					"query": [
+						{
+							"key": "prdcode",
+							"value": ""
+						},
+						{
+							"key": "product",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par card delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODM1MjYzOX0.MrGeGoTwpxbb5D0AdkMD9yhTnoUOxdhp-faeQ7zQ90BbfXNYbIjcsIogyobSFIEDdnf8xpXY2szp848MpoEpyQ"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-card/delete?prdCode=112",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-card",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "prdCode",
+							"value": "112"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "param-manager search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/param-manager/search",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"param-manager",
+						"search"
+					],
+					"query": [
+						{
+							"key": "paramNo",
+							"value": "02",
+							"disabled": true
+						},
+						{
+							"key": "paramName",
+							"value": "param2",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "param-manager detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/param-manager/detail?paramNo=08",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"param-manager",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "paramNo",
+							"value": "08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "param-manager create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjQyNDIwfQ.XrF-AHCJjDBpo3FkO21Oq2VeFJV0BZQk5n36J2Hx89ByOtXim7z2lR9FrO-NF3Mdtko9wdSCW6CnYxG_PpgIBw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"paramNo\": \"08\",\n\t\"paramName\": \"SoTongDai\",\n\t\"paramValue\": \"001001\",\n\t\"note\": \"Dex test\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/param-manager/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"param-manager",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "param-manager update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"paramNo\": \"08\",\n\t\"paramName\": \"SoTongDai\",\n\t\"paramValue\": \"001001\",\n\t\"note\": \"Dex test2\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/param-manager/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"param-manager",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "param-manager delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"paramNo\": \"08\",\n\t\"paramName\": \"SoTongDai\",\n\t\"paramValue\": \"001001\",\n\t\"note\": \"Dex test2\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/param-manager/delete?paramNo=08",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"param-manager",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "paramNo",
+							"value": "08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank-transfer search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/bank-transfer/search?status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"bank-transfer",
+						"search"
+					],
+					"query": [
+						{
+							"key": "bankCode",
+							"value": "999",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank-transfer detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/bank-transfer/detail?bankCode=999",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"bank-transfer",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "bankCode",
+							"value": "999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank-transfer create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCode\": \"991111\",\r\n    \"bankName\": \"Ngọc Bank\",\r\n    \"shtname\": \"shit\",\r\n    \"bin\": \"bin bin\",\r\n    \"citad_gt\": \"citad_gtcitad_gt\",\r\n    \"citad_tt\": \"citad_ttcitad_ttcitad_tt\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/bank-transfer/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"bank-transfer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank-transfer update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCode\": \"999\",\r\n    \"bankName\": \"Ngọc Bank\",\r\n    \"shtname\": \"shit\",\r\n    \"bin\": \"bin bin\",\r\n    \"citad_gt\": \"citad_gtcitad_gt\",\r\n    \"citad_tt\": \"citad_ttcitad_ttcitad_tt\",\r\n    \"status\": \"A\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/bank-transfer/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"bank-transfer",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank-transfer delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2ODI4NzExMX0.nlpESgolI4gmwbIbiKq60vw15Et7jWLSp3CU5zJ1gSoJqmoqHo--Vqf-KS2ZG7MVkTiB-_XLwLsR70kHPCBUqg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/bank-transfer/delete?bankCode=999",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"bank-transfer",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "bankCode",
+							"value": "999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mb-privision search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/mb-provision/search?",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"mb-provision",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mb-privision detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MzcxMjUxfQ.Fvko7_46yweG7FZYZ5w9CM_S60cMiF1j6_ULW_M4sKAe0ihipigF45I3SHB2aAL-BIH5MVvisJlwIKIiACdJtQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/mb-provision/detail?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"mb-provision",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mb-privision create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MzcxMjUxfQ.Fvko7_46yweG7FZYZ5w9CM_S60cMiF1j6_ULW_M4sKAe0ihipigF45I3SHB2aAL-BIH5MVvisJlwIKIiACdJtQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"provisionName\": \"name1\",\n\t\"provisionLink\": \"link1\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/mb-provision/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"mb-provision",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mb-privision update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MzcxMjUxfQ.Fvko7_46yweG7FZYZ5w9CM_S60cMiF1j6_ULW_M4sKAe0ihipigF45I3SHB2aAL-BIH5MVvisJlwIKIiACdJtQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"provisionName\": \"name1\",\n\t\"provisionLink\": \"link1111\",\n\t\"status\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/mb-provision/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"mb-provision",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mb-privision delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4MzcxMjUxfQ.Fvko7_46yweG7FZYZ5w9CM_S60cMiF1j6_ULW_M4sKAe0ihipigF45I3SHB2aAL-BIH5MVvisJlwIKIiACdJtQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/mb-provision/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"mb-provision",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/provider/search?providerCode=&providerName=&status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"provider",
+						"search"
+					],
+					"query": [
+						{
+							"key": "providerCode",
+							"value": ""
+						},
+						{
+							"key": "providerName",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjEyOTAyfQ.CBcmS05X-Yn_8xR9nT5gionxOHW8g2qCKL7BTMabV45nrMdQoUN1jZ04Xd-KyiS60g_ScYDY_CWo_225w7Ubzg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/provider/detail?id=28",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"provider",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjEyOTAyfQ.CBcmS05X-Yn_8xR9nT5gionxOHW8g2qCKL7BTMabV45nrMdQoUN1jZ04Xd-KyiS60g_ScYDY_CWo_225w7Ubzg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/provider/delete?id=29",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"provider",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "29"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjEyOTAyfQ.CBcmS05X-Yn_8xR9nT5gionxOHW8g2qCKL7BTMabV45nrMdQoUN1jZ04Xd-KyiS60g_ScYDY_CWo_225w7Ubzg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"providerCode\":\"VNPT-DN\",\n\t\"providerName\":\"VNPT\",\n\t\"serviceCode\":\"CABLE\",\n\t\"partner\":\"VIETTEL\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/provider/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"provider",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjEyOTAyfQ.CBcmS05X-Yn_8xR9nT5gionxOHW8g2qCKL7BTMabV45nrMdQoUN1jZ04Xd-KyiS60g_ScYDY_CWo_225w7Ubzg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"providerCode\":\"providerCode2\",\n\t\"providerName\":\"providerName2\",\n\t\"serviceCode\":\"serviceCode2\",\n\t\"partner\":\"partner22\",\n\t\"status\": \"A\",\n\t\"id\": 29\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/provider/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"provider",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company create",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjMxNjE2fQ.p95x_2mw2TizJovlVQaEedgQ1pQOjnUZj5NdxwfOyWh42t6qiw6yovs7avDyJGtkI57YETvsgFMhWSvlBJZwrA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compCode\":\"VN0099999\",\n\t\"compName\":\"Dex Company\",\n\t\"address\":\"Ha Noi\",\n\t\"dao\":\"daodaodao1\",\n\t\"mcn\":\"mcnmcn1\",\n\t\"mp\":\"mpmpmpmp1\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/company/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"company",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjMxNjE2fQ.p95x_2mw2TizJovlVQaEedgQ1pQOjnUZj5NdxwfOyWh42t6qiw6yovs7avDyJGtkI57YETvsgFMhWSvlBJZwrA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compCode\":\"VN0099999\",\n\t\"compName\":\"Dex Company\",\n\t\"address\":\"Ha Noi\",\n\t\"dao\":\"daodaodao\",\n\t\"mcn\":\"mcnmcn\",\n\t\"mp\":\"mpmpmpmp\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/company/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"company",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compCode\":\"VN0099999\",\n\t\"compName\":\"Dex Company\",\n\t\"address\":\"Ha Noi\",\n\t\"dao\":\"daodaodao\",\n\t\"mcn\":\"mcnmcn\",\n\t\"mp\":\"mpmpmpmp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/company/search?compCode=&compName=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"company",
+						"search"
+					],
+					"query": [
+						{
+							"key": "compCode",
+							"value": ""
+						},
+						{
+							"key": "compName",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjMxNjE2fQ.p95x_2mw2TizJovlVQaEedgQ1pQOjnUZj5NdxwfOyWh42t6qiw6yovs7avDyJGtkI57YETvsgFMhWSvlBJZwrA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compCode\":\"VN0099999\",\n\t\"compName\":\"Dex Company\",\n\t\"address\":\"Ha Noi\",\n\t\"dao\":\"daodaodao\",\n\t\"mcn\":\"mcnmcn\",\n\t\"mp\":\"mpmpmpmp\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/company/detail?compCode=VN0099999",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"company",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "compCode",
+							"value": "VN0099999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4NjMxNjE2fQ.p95x_2mw2TizJovlVQaEedgQ1pQOjnUZj5NdxwfOyWh42t6qiw6yovs7avDyJGtkI57YETvsgFMhWSvlBJZwrA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compCode\":\"VN0099999\",\n\t\"compName\":\"Dex Company\",\n\t\"address\":\"Ha Noi\",\n\t\"dao\":\"daodaodao\",\n\t\"mcn\":\"mcnmcn\",\n\t\"mp\":\"mpmpmpmp\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/company/delete?compCode=VN0099999",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"company",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "compCode",
+							"value": "VN0099999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-profile searchConsumer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5MzI5Njk4fQ.cAu_eMjRCOSfYgXX_rCxH8NzBLdw-7ZUW-dGpKz_tlT46417IN5GOCE50ZoPhO0BmXVYFoEeRY5BaLOZYjySUg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/user-profile/searchConsumer?usrid=&cifgrp=&idno=&page=0&size=1000",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"user-profile",
+						"searchConsumer"
+					],
+					"query": [
+						{
+							"key": "usrid",
+							"value": ""
+						},
+						{
+							"key": "cifgrp",
+							"value": ""
+						},
+						{
+							"key": "idno",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promotions create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODMxMDk2fQ.HDZuuYTFrLlWCXHcwuxhDB9oNfLYDoVICZ0SA0jsn6R761FhIdK48Y8kPFnfimeVlIGLo6-_a2p2iz44-gRCkg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerType\": \"CN\",\r\n    \"promotionName\": \"Ten khuyen mai\",\r\n    \"promotion\": \"Noi Dung Chuong Trinh\",\r\n    \"percentage1\": \"10\",\r\n\t\"fromDate1\": \"2019/1/1\",\r\n    \"toDate1\": \"2019/1/2\",\r\n\t\"percentage2\": \"20\",\r\n\t\"fromDate2\": \"2019/1/1\",\r\n    \"toDate2\": \"2019/1/2\",\r\n\t\"percentage3\": \"30\",\r\n    \"fromDate3\": \"2019/1/1\",\r\n\t\"toDate3\": \"2019/1/2\",\r\n    \"percentage4\": \"40\",\r\n    \"fromDate4\": \"2019/1/1\",\r\n\t\"toDate4\": \"2019/1/2\",\r\n\t\"prdName\": \"IZI,NCB\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/promotions/create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"promotions",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promotions search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5MzA1Mzk3fQ.-6nHE1hxk_l5EtpxKN09p-5htcwdDM51OYswTadmjyXA4VhTfvNvdd2lNsp7tk372TAgBe9ycl09R4VOOJaGlg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/promotions/search?promotionName&status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"promotions",
+						"search"
+					],
+					"query": [
+						{
+							"key": "promotionName",
+							"value": null
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promotions detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/promotions/detail?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"promotions",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promotions delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY4NzkyNTc0fQ.Dcp03FnYXKZQUSMCv8Lipva82mL4l6RTaEGbbQuvkTxXq8C7yTWyOcnaYlsSkYSYvk_aOu6XWNG76KP_QwUVkA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tranType\": \"IBT\",\n    \"typeId\": \"CK\",\n\t\"customerType\": \"2C\",\n    \"promotionName\": \"Ten khuyen mai\",\n    \"promotion\": \"Noi Dung Chuong Trinh\",\n    \"id\": 32,\n    \"percentage\": \"11\",\n\t\"fromDate\": \"2019/1/1\",\n    \"toDate\": \"2019/1/2\",\n\t\"prdName\": \"IZI,NCB\",\n\t\"status\": \"A\",\n\t\"createdBy\": \"Dex\",\n\t\"createdDate\": \"2019/10/1\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/promotions/delete?id=25",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"promotions",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promotions update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY5MjI1MzgwfQ.FyXhtjsxB9YvrkcPm3NIlGB2f6nuIEU7qPPrV0-jB1JaAPvV7dEM1oPe9FSihPG-CMUbS_AdYKNyqlrg88qvFQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tranType\": \"IBT\",\n    \"typeId\": \"CK\",\n\t\"customerType\": \"2C\",\n    \"promotionName\": \"Ten khuyen mai\",\n    \"promotion\": \"Noi Dung Chuong Trinh\",\n    \"id\": 106,\n    \"percentage\": \"11\",\n\t\"fromDate\": \"2019/1/1\",\n    \"toDate\": \"2019/1/2\",\n\t\"prdName\": \"IZI,NCB\",\n\t\"status\": \"D\",\n\t\"createdBy\": \"Dex\",\n\t\"createdDate\": \"2019/10/1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/promotions/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"promotions",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-banner create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5MjE2OTUzfQ.YWzTMyuvw9NdjlXZIOOTno65sYkK26W4GpLLJRhZHF-29gMRoczsaWaL1eGdmkfALeGmLl97oBkZQrn8okXvGw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bannerCode\": \"1\",\n    \"bannerName\": \"2\",\n    \"linkImg\": \"http://{{host}}/NCB-smart/img/banner/uploadFile\",\n    \"linkUrlVn\": \"http://{{host}}/NCB-smart/img/banner/uploadFile\",\n\t\"linkUrlEn\": \"http://{{host}}/NCB-smart/img/banner/uploadFile\",\n\t\"actionScreen\": \"6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-banner/create?",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-banner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-banner search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODcxMjMwfQ.3V2rp1mb2joomH82LUuv1MNZabFnoK4coFYhJRyrFHjrQ72Q1HQDr0rZ0BllrJqm0OMogB0DjUvDHaU7o1Gjeg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "page",
+						"type": "text",
+						"value": "1"
+					},
+					{
+						"key": "limit",
+						"type": "text",
+						"value": "100"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-banner/search?bannerCode=&bannerName=&status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-banner",
+						"search"
+					],
+					"query": [
+						{
+							"key": "bannerCode",
+							"value": ""
+						},
+						{
+							"key": "bannerName",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-banner detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODg5ODY2fQ.r3B-fXzHUHUx5gCp2KMFmJ40TN45HKob6UqvmmYtkpNyPcbwiwcP7mZZ9jcrwMZKfgB7goIhGt1m3L9sIUiLZg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-banner/detail?id=6",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-banner",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-banner update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODcxMjMwfQ.3V2rp1mb2joomH82LUuv1MNZabFnoK4coFYhJRyrFHjrQ72Q1HQDr0rZ0BllrJqm0OMogB0DjUvDHaU7o1Gjeg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "page",
+						"type": "text",
+						"value": "1"
+					},
+					{
+						"key": "limit",
+						"type": "text",
+						"value": "100"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"10\",\r\n        \"bannerCode\": \"1\",\r\n        \"bannerName\": \"2\",\r\n        \"linkImg\": \"3\",\r\n        \"linkUrlVn\": \"4\",\r\n        \"linkUrlEn\": \"5\",\r\n        \"status\": \"A\",\r\n        \"actionScreen\": \"7\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-banner/update",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-banner",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-banner delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY4ODcxMjMwfQ.3V2rp1mb2joomH82LUuv1MNZabFnoK4coFYhJRyrFHjrQ72Q1HQDr0rZ0BllrJqm0OMogB0DjUvDHaU7o1Gjeg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "page",
+						"type": "text",
+						"value": "1"
+					},
+					{
+						"key": "limit",
+						"type": "text",
+						"value": "100"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-banner/delete?id=10",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-banner",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "function get all prd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY5MjI1MzgwfQ.FyXhtjsxB9YvrkcPm3NIlGB2f6nuIEU7qPPrV0-jB1JaAPvV7dEM1oPe9FSihPG-CMUbS_AdYKNyqlrg88qvFQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/function/getAllPrdName",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"function",
+						"getAllPrdName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-feedback create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5MjI0MjEyfQ.fMFR572E9urad-yNhUu5NcMWv-5eAuN4ae-nXp4B_Cs64sb2VJvwuBC4bn0AED-s7tEtj1hJvnRelesEANPLlA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productCode\": \"Code001\",\n\t\"productName\": \"Name001\",\n\t\"type\": \"YY\",\n\t\"phone\": \"0000000191\",\n\t\"email\": \"xxx@xxx.xxx\",\n\t\"name\": \"name name\",\n\t\"address\": \"Dịa chỉ\",\n\t\"description\": \"Chsu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-feedback/create?",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-feedback",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ncb-feedback search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eHh4IiwiZXhwIjoxNTY5MjM2NjE4fQ.0QdBelJHBEEk93BiBjITL0ikZGUA8U9N4vWJL5UG5G6mTvbX5Tt0XT4XCVOOUbAq4Ftq54AYZGVaIO4Qg8gJCQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productCode\": \"Code001\",\n\t\"productName\": \"Name001\",\n\t\"type\": \"YY\",\n\t\"phone\": \"0000000191\",\n\t\"email\": \"xxx@xxx.xxx\",\n\t\"name\": \"name name\",\n\t\"address\": \"Dịa chỉ\",\n\t\"description\": \"Chsu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/ncb-feedback/search?productCode=&productName=&type=&status=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"ncb-feedback",
+						"search"
+					],
+					"query": [
+						{
+							"key": "productCode",
+							"value": ""
+						},
+						{
+							"key": "productName",
+							"value": ""
+						},
+						{
+							"key": "type",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config get-credit-card-number",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODI1NTY0fQ.q96VT9a6jLFN62Ms4UlGXpKRQbFqVUGFA72I5_zNRDKFIczI9iUM2VOKhLE86LCezPLOZpMdc6XjhryVkWSr8g"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/get-credit-card-number",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"get-credit-card-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config create-credit-card-number",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODI1NTY0fQ.q96VT9a6jLFN62Ms4UlGXpKRQbFqVUGFA72I5_zNRDKFIczI9iUM2VOKhLE86LCezPLOZpMdc6XjhryVkWSr8g"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"test creditcardnumber 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/create-credit-card-number",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"create-credit-card-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config check-duplicate-credit-card-number",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODI1NTY0fQ.q96VT9a6jLFN62Ms4UlGXpKRQbFqVUGFA72I5_zNRDKFIczI9iUM2VOKhLE86LCezPLOZpMdc6XjhryVkWSr8g"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/check-duplicate-credit-card-number?value=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"check-duplicate-credit-card-number"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config update-credit-card-number",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODMxMDk2fQ.HDZuuYTFrLlWCXHcwuxhDB9oNfLYDoVICZ0SA0jsn6R761FhIdK48Y8kPFnfimeVlIGLo6-_a2p2iz44-gRCkg"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/update-credit-card-number?oldValue=LIMIT&newValue=2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"update-credit-card-number"
+					],
+					"query": [
+						{
+							"key": "oldValue",
+							"value": "LIMIT"
+						},
+						{
+							"key": "newValue",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config delete-credit-card-number",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgxNDcyfQ.CZ9ckJWq_j_8ZDGvkFx34cVsWlAfMv5tQuA2wpfP1a8op3VngcyVC-mKzm8GBKjBq8vR_4ByzK5ITwiDw3-VYQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/delete-credit-card-number?value=test creditcardnumber 4",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"delete-credit-card-number"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "test creditcardnumber 4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config get-reissue-card-reason",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODMzMjgyfQ.ce8DfdYim25uSnnYV489ZnTosuaNmNtgRrLjoofBuqt_6hTNc3R3Xj1lRywC73Ff-Nz0wRyqvd-j_qRp5RLanQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/get-reissue-card-reason",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"get-reissue-card-reason"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config update-reissue-card-reason",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODMzMjgyfQ.ce8DfdYim25uSnnYV489ZnTosuaNmNtgRrLjoofBuqt_6hTNc3R3Xj1lRywC73Ff-Nz0wRyqvd-j_qRp5RLanQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"test reissue_card_reason 333333\",\n\t\"code\": \"003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/modify-reissue-card-reason",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"modify-reissue-card-reason"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config check-duplicate-reissue-card-reason",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgzMzE4fQ.5V5OMylqvpmSAdpHnd-2DrktfCe89n2SvFegS3MI0afjyvxzWKpule6OJMGaMXV7f7jRqZiP8i99NjBdVFnO2A"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/check-duplicate-reissue-card-reason?code=002",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"check-duplicate-reissue-card-reason"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config delete-reissue-card-reason",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5ODMzMjgyfQ.ce8DfdYim25uSnnYV489ZnTosuaNmNtgRrLjoofBuqt_6hTNc3R3Xj1lRywC73Ff-Nz0wRyqvd-j_qRp5RLanQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"test reissue_card_reason 1\",\n\t\"code\": \"003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/delete-reissue-card-reason?code=code3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"delete-reissue-card-reason"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "code3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config update-other-param",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgyNjY1fQ.BzHXZHZIH0nCOQwmmt81PIUiAUFxUDPgIyqRRLW5BgjKRFlKh4nBSgGl2y4IqapiG6OxnSMzlqttj5FHKNF2Mw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"param\":\"par1\",\n\t\"code\": \"code3\",\n\t\"value\": \"value13\",\n\t\"note\": \"note13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/modify-other-param-config",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"modify-other-param-config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config get-other-param",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgyNjY1fQ.BzHXZHZIH0nCOQwmmt81PIUiAUFxUDPgIyqRRLW5BgjKRFlKh4nBSgGl2y4IqapiG6OxnSMzlqttj5FHKNF2Mw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"param\":\"par1\",\n\t\"code\": \"code1\",\n\t\"value\": \"value1\",\n\t\"note\": \"note002\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/get-other-param-config",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"get-other-param-config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config check-duplicate-other-param",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgyNjY1fQ.BzHXZHZIH0nCOQwmmt81PIUiAUFxUDPgIyqRRLW5BgjKRFlKh4nBSgGl2y4IqapiG6OxnSMzlqttj5FHKNF2Mw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"param\":\"par1\",\n\t\"code\": \"code1\",\n\t\"value\": \"value1\",\n\t\"note\": \"note002\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/check-duplicate-other-param-config?param=par1&code=code3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"check-duplicate-other-param-config"
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "par1"
+						},
+						{
+							"key": "code",
+							"value": "code3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "par-config delete-other-param-config",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTY5NTgyNjY1fQ.BzHXZHZIH0nCOQwmmt81PIUiAUFxUDPgIyqRRLW5BgjKRFlKh4nBSgGl2y4IqapiG6OxnSMzlqttj5FHKNF2Mw"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"test reissue_card_reason 1\",\n\t\"code\": \"003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/NCB-smart/par-config/delete-other-param-config?param=par001&code=003",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"NCB-smart",
+						"par-config",
+						"delete-other-param-config"
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "par001"
+						},
+						{
+							"key": "code",
+							"value": "003"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
