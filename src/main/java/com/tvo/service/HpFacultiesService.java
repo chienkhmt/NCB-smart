@@ -27,7 +27,7 @@ public class HpFacultiesService extends HpTuitionFeeService<HpFacultieInfo> {
 		try {
 			LOGGER.info(TAG() + "filter start");
 			HpFacultieInfo lsInfo = InfoDAO
-					.findBySchoolCodeIgnoreCaseAndFacultyCodeIgnoreCaseAndStatusAndDeleteAtIsNull(
+					.findBySchoolCodeIgnoreCaseAndFacultyCodeContainingIgnoreCaseAndStatusAndDeleteAtIsNull(
 							schoolCode.toUpperCase(), facultieCode.toUpperCase(), status);
 			LOGGER.info(TAG() + "filter done: " + lsInfo);
 			if (lsInfo != null) {

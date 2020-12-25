@@ -7,6 +7,6 @@ import com.tvo.model.HpFacultieInfo;
 @Repository
 public interface HpFacultiesInfoDAO extends HpTuitionFeesDAO<HpFacultieInfo> {
 
-	HpFacultieInfo findBySchoolCodeIgnoreCaseAndFacultyCodeIgnoreCaseAndStatusAndDeleteAtIsNull(String schoolCode,
-			String faCode, int status);
+	HpFacultieInfo findBySchoolCodeIgnoreCaseAndFacultyCodeContainingIgnoreCaseAndStatusAndDeleteAtIsNull(
+			String schoolCode, String faCode, int status);
 }

@@ -10,5 +10,5 @@ import com.tvo.model.HpCostInfo;
 @Repository
 public interface HpCostsInfoDAO extends HpTuitionFeesDAO<HpCostInfo> {
 
-	List<HpCostInfo> findByCostCodeIgnoreCaseAndDeleteAtIsNull(String costName);
+	List<HpCostInfo> findByCostCodeContainingIgnoreCaseAndDeleteAtIsNull(String costName);
 }

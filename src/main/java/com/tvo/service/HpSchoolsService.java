@@ -29,7 +29,7 @@ public class HpSchoolsService extends HpTuitionFeeService<HpSchoolInfo> {
 		try {
 			LOGGER.info(TAG() + "filter start");
 			HpSchoolInfo lsSchools = schoolsInfoDAO
-					.findBySchoolCodeIgnoreCaseAndStatusAndDeleteAtIsNull(dataFind.toUpperCase(), status);
+					.findBySchoolCodeContainingIgnoreCaseAndStatusAndDeleteAtIsNull(dataFind.toUpperCase(), status);
 			LOGGER.info(TAG() + "filter done: " + lsSchools);
 			if (lsSchools != null) {
 				lsData.add(lsSchools);

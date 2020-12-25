@@ -11,7 +11,7 @@ import com.tvo.model.HpSchoolInfo;
 @Repository
 public interface HpSchoolsInfoDAO extends HpTuitionFeesDAO<HpSchoolInfo> {
 
-	HpSchoolInfo findBySchoolCodeIgnoreCaseAndStatusAndDeleteAtIsNull(String schoolCode, int status);
+	HpSchoolInfo findBySchoolCodeContainingIgnoreCaseAndStatusAndDeleteAtIsNull(String schoolCode, int status);
 
 	@Query(countQuery = "SELECT count(*) HpSchoolInfo p WHERE p.deleteAt is null", nativeQuery = true)
 	List<HpSchoolInfo> findByDeleteAtIsNull(Pageable pageable);
