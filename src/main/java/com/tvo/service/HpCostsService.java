@@ -26,7 +26,7 @@ public class HpCostsService extends HpTuitionFeeService<HpCostInfo> {
 	public List<HpCostInfo> findDataBy(String dataFind) {
 		try {
 			LOGGER.info(TAG() + "filter start");
-			List<HpCostInfo> lsCosts = costsInfoDAO.findByCostCodeAndDeleteAtIsNull(dataFind);
+			List<HpCostInfo> lsCosts = costsInfoDAO.findByCostCodeIgnoreCaseAndDeleteAtIsNull(dataFind.toUpperCase());
 			LOGGER.info(TAG() + "filter done: " + lsCosts);
 			return lsCosts;
 		} catch (Exception e) {

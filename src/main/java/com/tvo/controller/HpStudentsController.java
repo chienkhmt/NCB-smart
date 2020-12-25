@@ -124,4 +124,21 @@ public class HpStudentsController {
 		return responeData;
 	}
 
+	@GetMapping(value = "/detailt")
+	public ResponeData<HpStudentInfo> getDetailt(@RequestParam(required = false, defaultValue = "0") Integer idCost) {
+		ResponeData<HpStudentInfo> responeData = new ResponeData<>();
+		logger.info("Get student info start - {} ", idCost);
+		HpStudentInfo hpInfo = new HpStudentInfo();
+		if (idCost == null) {
+			responeData.setCode(AppConstant.PARAM_MANAGER_EXISTED_CODE);
+			responeData.setDescription(AppConstant.PARAM_MANAGER_EXISTED_MESSAGE);
+		} else {
+			hpInfo = studentsService.getDataById(idCost);
+		}
+		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
+		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
+		responeData.setBody(hpInfo);
+		return responeData;
+	}
+
 }

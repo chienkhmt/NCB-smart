@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tvo.common.AppConstant;
 import com.tvo.model.HpCostInfo;
+import com.tvo.model.HpFacultieInfo;
 import com.tvo.model.HpSchoolInfo;
 import com.tvo.model.HpStudentInfo;
 import com.tvo.response.ResponeData;
@@ -111,17 +112,17 @@ public class HpSchoolsController {
 
 	@GetMapping(value = "/get-schools")
 	public ResponeData<List<HpSchoolInfo>> getSchools(
-			@RequestParam(required = false, defaultValue = "") String schooCode,
+			@RequestParam(required = false, defaultValue = "") String schoolCode,
 			@RequestParam(required = false, defaultValue = "0") Integer status,
 			@RequestParam(name = "page", required = false, defaultValue = "0") Integer page,
 			@RequestParam(name = "offset", required = false, defaultValue = "10") Integer offset) {
 		ResponeData<List<HpSchoolInfo>> responeData = new ResponeData<>();
-		logger.info("Get school info start - {}|{}|{}|{}", schooCode, status, page, offset);
+		logger.info("Get school info start - {}|{}|{}|{}", schoolCode, status, page, offset);
 		List<HpSchoolInfo> lsSchools;
-		if (schooCode == null || schooCode.isEmpty()) {
+		if (schoolCode == null || schoolCode.isEmpty()) {
 			lsSchools = schoolsService.getData(PageRequest.of(page, offset, Sort.by("id").descending()));
 		} else {
-			lsSchools = schoolsService.findDataSchool(schooCode, status);
+			lsSchools = schoolsService.findDataSchool(schoolCode, status);
 		}
 		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
 		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
@@ -129,4 +130,20 @@ public class HpSchoolsController {
 		return responeData;
 	}
 
+	@GetMapping(value = "/detailt")
+	public ResponeData<HpSchoolInfo> getDetailt(@RequestParam(required = false, defaultValue = "0") Integer idCost) {
+		ResponeData<HpSchoolInfo> responeData = new ResponeData<>();
+		logger.info("Get school info start - {} ", idCost);
+		HpSchoolInfo hpInfo = new HpSchoolInfo();
+		if (idCost == null) {
+			responeData.setCode(AppConstant.PARAM_MANAGER_EXISTED_CODE);
+			responeData.setDescription(AppConstant.PARAM_MANAGER_EXISTED_MESSAGE);
+		} else {
+			hpInfo = schoolsService.getDataById(idCost);
+		}
+		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
+		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
+		responeData.setBody(hpInfo);
+		return responeData;
+	}
 }

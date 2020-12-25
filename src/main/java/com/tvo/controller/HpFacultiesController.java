@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tvo.common.AppConstant;
+import com.tvo.model.HpCostInfo;
 import com.tvo.model.HpFacultieInfo;
 import com.tvo.response.ResponeData;
 import com.tvo.service.HpFacultiesService;
@@ -119,6 +120,23 @@ public class HpFacultiesController {
 		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
 		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
 		responeData.setBody(lsCosts);
+		return responeData;
+	}
+
+	@GetMapping(value = "/detailt")
+	public ResponeData<HpFacultieInfo> getDetailt(@RequestParam(required = false, defaultValue = "0") Integer idCost) {
+		ResponeData<HpFacultieInfo> responeData = new ResponeData<>();
+		logger.info("Get faculty info start - {} ", idCost);
+		HpFacultieInfo hpInfo = new HpFacultieInfo();
+		if (idCost == null) {
+			responeData.setCode(AppConstant.PARAM_MANAGER_EXISTED_CODE);
+			responeData.setDescription(AppConstant.PARAM_MANAGER_EXISTED_MESSAGE);
+		} else {
+			hpInfo = service.getDataById(idCost);
+		}
+		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
+		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
+		responeData.setBody(hpInfo);
 		return responeData;
 	}
 

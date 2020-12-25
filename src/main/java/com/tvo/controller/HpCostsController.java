@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tvo.common.AppConstant;
+import com.tvo.model.HpClassInfo;
 import com.tvo.model.HpCostInfo;
 import com.tvo.model.HpSchoolInfo;
 import com.tvo.model.HpStudentInfo;
@@ -122,6 +123,23 @@ public class HpCostsController {
 		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
 		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
 		responeData.setBody(lsCosts);
+		return responeData;
+	}
+
+	@GetMapping(value = "/detailt")
+	public ResponeData<HpCostInfo> getDetailt(@RequestParam(required = false, defaultValue = "0") Integer idCost) {
+		ResponeData<HpCostInfo> responeData = new ResponeData<>();
+		logger.info("Get cost info start - {} ", idCost);
+		HpCostInfo hpInfo = new HpCostInfo();
+		if (idCost == null) {
+			responeData.setCode(AppConstant.PARAM_MANAGER_EXISTED_CODE);
+			responeData.setDescription(AppConstant.PARAM_MANAGER_EXISTED_MESSAGE);
+		} else {
+			hpInfo = costsService.getDataById(idCost);
+		}
+		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
+		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
+		responeData.setBody(hpInfo);
 		return responeData;
 	}
 

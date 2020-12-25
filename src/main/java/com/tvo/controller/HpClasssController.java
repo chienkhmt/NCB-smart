@@ -104,22 +104,40 @@ public class HpClasssController {
 	}
 
 	@GetMapping(value = "/get-clazzs")
-	public ResponeData<List<HpClassInfo>> getClazzs(@RequestParam(required = false, defaultValue = "") String schooCode,
+	public ResponeData<List<HpClassInfo>> getClazzs(
+			@RequestParam(required = false, defaultValue = "") String schoolCode,
 			@RequestParam(required = false, defaultValue = "") String facultieCode,
 			@RequestParam(required = false, defaultValue = "") String classCode,
 			@RequestParam(required = false, defaultValue = "0") Integer status) {
 		ResponeData<List<HpClassInfo>> responeData = new ResponeData<>();
 		List<HpClassInfo> lsCosts;
-		logger.info("Get clazzs info start - {}|{}|{}|{} ", schooCode, facultieCode, classCode, status);
-		if ((schooCode == null || schooCode.isEmpty()) && (facultieCode == null || facultieCode.isEmpty())
+		logger.info("Get clazzs info start - {}|{}|{}|{} ", schoolCode, facultieCode, classCode, status);
+		if ((schoolCode == null || schoolCode.isEmpty()) && (facultieCode == null || facultieCode.isEmpty())
 				&& classCode == null || classCode.isEmpty()) {
 			lsCosts = service.getData();
 		} else {
-			lsCosts = service.findDataClass(schooCode, facultieCode, classCode, status);
+			lsCosts = service.findDataClass(schoolCode, facultieCode, classCode, status);
 		}
 		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
 		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
 		responeData.setBody(lsCosts);
+		return responeData;
+	}
+
+	@GetMapping(value = "/detailt")
+	public ResponeData<HpClassInfo> getDetailt(@RequestParam(required = false, defaultValue = "0") Integer idClass) {
+		ResponeData<HpClassInfo> responeData = new ResponeData<>();
+		logger.info("Get clazzs info start - {} ", idClass);
+		HpClassInfo hpClass = new HpClassInfo();
+		if (idClass == null) {
+			responeData.setCode(AppConstant.PARAM_MANAGER_EXISTED_CODE);
+			responeData.setDescription(AppConstant.PARAM_MANAGER_EXISTED_MESSAGE);
+		} else {
+			hpClass = service.getDataById(idClass);
+		}
+		responeData.setCode(AppConstant.SYSTEM_SUCCESS_CODE);
+		responeData.setDescription(AppConstant.SYSTEM_SUCCESS_MESSAGE);
+		responeData.setBody(hpClass);
 		return responeData;
 	}
 
