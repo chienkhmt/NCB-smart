@@ -107,8 +107,8 @@ public class HpStudentsController {
 
 	@GetMapping(value = "/get-students")
 	public ResponeData<List<HpStudentInfo>> getStudents(@RequestParam(required = false) String schoolName,
-			@RequestParam(name = "page", required = false) Integer page,
-			@RequestParam(name = "offset", required = false) Integer offset) {
+			@RequestParam(name = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(name = "offset", required = false, defaultValue = "10") Integer offset) {
 		ResponeData<List<HpStudentInfo>> responeData = new ResponeData<>();
 		logger.info("Get students info start - {}|{}|{}", schoolName, page, offset);
 		List<HpStudentInfo> lsSchools;

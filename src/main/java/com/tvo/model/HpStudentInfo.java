@@ -20,7 +20,7 @@ public class HpStudentInfo extends HpBaseModel {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator")
 	@Column(name = "ID")
 	private Integer id;
-	@Column(name = "STUDENT_CODE")
+	@Column(name = "STUDENT_CODE", unique = true)
 	private String studentCode;
 
 	@Column(name = "STUDENT_NAME")
