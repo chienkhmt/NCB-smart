@@ -155,7 +155,16 @@ public class NotificationServiceImpl implements NotificationService {
         notificationsEntity.setTitle(StringUtils.isEmpty(createNotificationRequest.getTitle()) ? null : createNotificationRequest.getTitle());
         notificationsEntity.setContent(StringUtils.isEmpty(createNotificationRequest.getContent()) ? null : createNotificationRequest.getContent());
         notificationsEntity.setRepeatType(StringUtils.isEmpty(createNotificationRequest.getRepeatType()) ? null : createNotificationRequest.getRepeatType().toString());
-        notificationsEntity.setRepeatValue(StringUtils.isEmpty(createNotificationRequest.getRepeatValue()) ? null : createNotificationRequest.getRepeatValue());
+        String repeatValue = createNotificationRequest.getRepeatValue();
+        if (!StringUtils.isEmpty(repeatValue)) {
+            repeatValue = repeatValue.replace("T", " ");
+            repeatValue = repeatValue.replace("-", "");
+            repeatValue = repeatValue.replace(":", "");
+            notificationsEntity.setRepeatValue(repeatValue);
+        } else {
+            notificationsEntity.setRepeatValue(null);
+        }
+        notificationsEntity.setRepeatValue(repeatValue);
         notificationsEntity.setReceiverUserId(StringUtils.isEmpty(createNotificationRequest.getReceiverUserId()) ? null : createNotificationRequest.getReceiverUserId());
         notificationsEntity.setObjectUserType(StringUtils.isEmpty(createNotificationRequest.getObjectUserType()) ? null : createNotificationRequest.getObjectUserType());
         notificationsEntity.setType(StringUtils.isEmpty(createNotificationRequest.getTitle()) ? null : createNotificationRequest.getType());
@@ -228,8 +237,12 @@ public class NotificationServiceImpl implements NotificationService {
         if (!StringUtils.isEmpty(updateNotificationRequest.getRepeatType())) {
             notificationsEntity.setRepeatType(updateNotificationRequest.getRepeatType());
         }
-        if (!StringUtils.isEmpty(updateNotificationRequest.getRepeatValue())) {
-            notificationsEntity.setRepeatValue(updateNotificationRequest.getRepeatValue());
+        String repeatValue = updateNotificationRequest.getRepeatValue();
+        if (!StringUtils.isEmpty(repeatValue)) {
+            repeatValue = repeatValue.replace("T", " ");
+            repeatValue = repeatValue.replace("-", "");
+            repeatValue = repeatValue.replace(":", "");
+            notificationsEntity.setRepeatValue(repeatValue);
         }
         if (!StringUtils.isEmpty(updateNotificationRequest.getObjectUserType())) {
             notificationsEntity.setObjectUserType(updateNotificationRequest.getObjectUserType());
